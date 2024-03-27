@@ -9,7 +9,7 @@ return {
         opts = {
             colors = {
                 theme = {
-                    all = {
+                    dragon = {
                         ui = {
                             bg_gutter = "none",
                             bg = "none",
