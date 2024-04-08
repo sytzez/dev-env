@@ -23,7 +23,8 @@ return {
 
             return {
                 options = {
-                    theme = "auto",
+                    -- theme = "auto",
+                    theme = "iceberg_dark",
                     globalstatus = true,
                     disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
                 },
