@@ -25,11 +25,14 @@ config.colors = {
 	-- },
 }
 
-config.font = wezterm.font("0xProto")
+config.font = wezterm.font({
+	family = "0xProto",
+	harfbuzz_features = { "ss01" },
+})
 config.font_size = 12
 
-config.font = wezterm.font("ProggyClean Nerd Font Mono")
-config.font_size = 12
+-- config.font = wezterm.font("ProggyClean Nerd Font Mono")
+-- config.font_size = 12
 
 config.freetype_load_target = "Normal"
 
