@@ -29,15 +29,16 @@ config.font = wezterm.font({
 	family = "0xProto",
 	harfbuzz_features = { "ss01" },
 })
-config.font_size = 12
+config.font_size = 10
 
--- config.font = wezterm.font("ProggyClean Nerd Font Mono")
--- config.font_size = 12
+config.font = wezterm.font("ProggySquareTTSZ")
+config.font_size = 10
 
 config.freetype_load_target = "Normal"
 
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
+-- config.tab_bar_at_bottom = true
 
 config.window_decorations = "RESIZE"
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
