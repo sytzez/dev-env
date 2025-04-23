@@ -5,3 +5,6 @@ vim.opt.relativenumber = false
 
 -- Set to `false` to globally disable all snacks animations
 vim.g.snacks_animate = false
+
+-- Make filename the title of the process
+vim.opt.title = true

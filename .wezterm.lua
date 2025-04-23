@@ -25,14 +25,20 @@ config.colors = {
 	-- },
 }
 
+-- Comfortable font
 config.font = wezterm.font({
 	family = "0xProto",
 	harfbuzz_features = { "ss01" },
 })
-config.font_size = 10
+config.font_size = 13
 
-config.font = wezterm.font("ProggySquareTTSZ")
-config.font_size = 10
+-- Most compact bitmap font, for looking at lots of code
+config.font = wezterm.font_with_fallback({ "ProggySquareTTSZ", { family = "Symbols Nerd Font Mono", scale = 0.6 } })
+config.font_size = 12
+
+-- Bit bigger bitmap font, more comfy
+-- config.font = wezterm.font("Fixedsys Excelsior")
+-- config.font_size = 12
 
 config.freetype_load_target = "Normal"
 
