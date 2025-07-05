@@ -10,35 +10,38 @@ local config = wezterm.config_builder()
 config.color_scheme = "Catppuccin Mocha"
 
 config.colors = {
-	-- foreground = "white",
-	-- background = "rgba(0 0 0 65%)",
-	-- tab_bar = {
-	-- 	background = "rgba(0 0 0 65%)",
-	-- 	inactive_tab = {
-	-- 		bg_color = "rgba(0 0 0 65%)",
-	-- 		fg_color = "#666666",
-	-- 	},
-	-- 	new_tab = {
-	-- 		bg_color = "rgba(0 0 0 65%)",
-	-- 		fg_color = "#666666",
-	-- 	},
-	-- },
+    -- foreground = "white",
+    -- background = "rgba(0 0 0 50%)",
+    -- tab_bar = {
+    --      background = "rgba(0 0 0 65%)",
+    --      inactive_tab = {
+    --              bg_color = "rgba(0 0 0 65%)",
+    --              fg_color = "#666666",
+    --      },
+    --      new_tab = {
+    --              bg_color = "rgba(0 0 0 65%)",
+    --              fg_color = "#666666",
+    --      },
+    -- },
 }
 
--- Comfortable font
-config.font = wezterm.font({
-	family = "0xProto",
-	harfbuzz_features = { "ss01" },
-})
-config.font_size = 13
-
--- Most compact bitmap font, for looking at lots of code
-config.font = wezterm.font_with_fallback({ "ProggySquareTTSZ", { family = "Symbols Nerd Font Mono", scale = 0.6 } })
-config.font_size = 12
-
--- Bit bigger bitmap font, more comfy
--- config.font = wezterm.font("Fixedsys Excelsior")
--- config.font_size = 12
+local font = 3
+if font == 1 then
+    -- Comfortable font
+    config.font = wezterm.font({
+        family = "0xProto",
+        harfbuzz_features = { "ss01" },
+    })
+    config.font_size = 11
+elseif font == 2 then
+    -- Most compact bitmap font, for looking at lots of code
+    config.font = wezterm.font_with_fallback({ "ProggySquareTTSZ", { family = "Symbols Nerd Font Mono", scale = 0.6 } })
+    config.font_size = 12
+elseif font == 3 then
+    -- Bit bigger bitmap font, more comfy
+    config.font = wezterm.font("Fixedsys Excelsior")
+    config.font_size = 12
+end
 
 config.freetype_load_target = "Normal"
 
