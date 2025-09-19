@@ -28,9 +28,9 @@ config.colors = {
 
 config.window_background_gradient = {
 	colors = { bg, "black" },
-	-- colors = { "#303030", "black" },
 	orientation = { Linear = { angle = -70.0 } },
-	noise = 64,
+	noise = 300,
+	-- noise = 0,
 }
 
 local font = 0
